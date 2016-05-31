@@ -1,4 +1,4 @@
-package com.philip.client.utils.security;
+package com.lujing.website.utils.security;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

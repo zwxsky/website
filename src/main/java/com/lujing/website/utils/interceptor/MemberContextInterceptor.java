@@ -1,4 +1,4 @@
-package com.philip.client.utils.interceptor;
+package com.lujing.website.utils.interceptor;
 
 import java.io.UnsupportedEncodingException;
 
@@ -9,7 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.util.UrlPathHelper;
 
-import com.philip.client.utils.SessionUser;
+import com.lujing.website.utils.SessionUser;
 
 public class MemberContextInterceptor extends HandlerInterceptorAdapter{
 

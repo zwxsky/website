@@ -1,4 +1,4 @@
-package com.philip.client.utils.security;
+package com.lujing.website.utils.security;
 
 /**
  * 密码加密接口

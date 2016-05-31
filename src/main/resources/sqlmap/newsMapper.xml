@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lujing.website.dao.NewsDao">
+	<sql id="default_column">
+	    `news`.`id`,
+	    `news`.`title`,
+	    `news`.`content`,
+	    `news`.`pic_url` as picUrl,
+	    `news`.`author`,
+	    `news`.`gmt_created` as gmtCreated,
+	    `news`.`gmt_modified` as gmtModified
+	</sql>
+	
+	<sql id="pager_cond">
+		<if test="pager.sort !=null ">
+			order by ${pager.sort}
+			<if test="pager.dir != null">
+				${pager.dir}
+			</if>
+		</if>
+		<if test="pager.start>=0 and pager.limit>0">
+			limit #{pager.start}, #{pager.limit}
+		</if>
+	</sql>
+	
+	<select id="queryModel" resultType="com.lujing.website.model.News">
+		select <include refid="default_column"/>
+		from news
+		where id=#{id}
+	</select>
+	<insert id="insert" parameterType="com.lujing.website.model.News" keyProperty="id">
+		insert into news(
+			   title,
+			   content,
+			   picUrl,
+			   author,
+			   gmtCreated,
+			   gmtModified		
+		)
+		value(
+				#{title},
+				#{content},
+				#{picUrl},
+				#{author},
+				now(),now()
+		)
+	</insert>
+	
+	<select id="queryByPager" resultType="com.lujing.website.model.News">
+		select <include refid="default_column"/>
+		from news
+		<include refid="pager_cond"/>
+	</select>
+</mapper>
+

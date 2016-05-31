@@ -6,10 +6,11 @@ PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
 
 	<settings> 
         <setting name="cacheEnabled" value="true" /> 
+        <!-- 插入数据后返回自增长id  -->
         <setting name="useGeneratedKeys" value="true" /> 
         <setting name="defaultExecutorType" value="REUSE" />  
     </settings>
     <mappers>
-	    <mapper resource="sqlmap/adminMapper.xml" />
+	    <mapper resource="sqlmap/newsMapper.xml" />
     </mappers>   
 </configuration>

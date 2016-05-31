@@ -1,4 +1,4 @@
-package com.philip.client.model;
+package com.lujing.website.model;
 
 import java.io.Serializable;
 import java.util.Date;

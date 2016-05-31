@@ -1,4 +1,4 @@
-package com.philip.client.utils;
+package com.lujing.website.utils;
 
 import java.io.Serializable;
 import java.util.Date;
