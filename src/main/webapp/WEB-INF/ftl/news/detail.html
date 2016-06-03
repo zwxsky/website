@@ -1,10 +1,217 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="utf-8" />
+	<title>行吧app ,让出行变的更舒心</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="鹿径是一个提供出行服务的互联网公司" />
+	<meta name="keywords" content="鹿径,出行,服务,违章查询,路况查询" />
+	<meta name="author" content="鹿径|鹿径科技" />
+	<meta name="application-name" content="行吧" />
+	<link rel="shortcut icon" href="http://www.parox.cn/images/favicon.ico">
+	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/parox-base.css" media="screen">
+	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/pre2-parox-home.css?v20151021" media="screen">
+	<script src="http://www.parox.cn/js/lib/jquery/jquery-1.10.2.min.js"></script>
+	<script src="http://www.parox.cn/js/lib/bootstrap/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    	<script src="http://www.parox.cn/js/compatibility/ie8-responsive-file-warning.js"></script>
+    	<script src="http://www.parox.cn/js/compatibility/html5shiv.min.js"></script>
+    	<script src="http://www.parox.cn/js/compatibility/respond.js"></script>
+    <![endif]-->
+    
+    <script>
+    
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7adf4f36aac22b99b592f1d2fa497c81";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<style>
+    	#bdshare_weixin_qrcode_dialog_bg,#bdshare_weixin_qrcode_dialog{
+    		width:262px!important;
+    		height:295px!important;
+    	}
+    </style>
+
+       <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/lujin-home.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.parox.cn/css/css2.0/pre2-parox-home.css?v20151021" media="screen">
 </head>
-<body>
- ${news.title!"佚名"}
+
+<body  data-spy="scroll" data-target="#rock-navigation" >
+	<div>
+		<!-- navacation -->
+		<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px"role="navigation" >
+		    <div class="container" >
+
+		      <div class="navbar-header"  >
+		        <button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
+		          <span class="icon icon-bar"></span>
+		          <span class="icon icon-bar"></span>
+		          <span class="icon icon-bar"></span>
+		        </button>
+		        <img  src="/img/logo.png"  style="width:60px;height:60px">
+		      </div>
+		      <nav class="collapse navbar-collapse" id="rock-navigation"  >
+		        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase" >
+		          <li class="active"><a href="/index.html" class="f-white-lg" >首页</a></li>
+		          <li><a href="/news" class="f-white-lg" >新闻</a></li>
+		          <li><a href="#portfolio" class="f-white-lg">招聘</a></li><!-- smoothScroll  -->
+		        </ul>
+		      </nav>
+
+		    </div>
+		  </div>
+		  <!-- navacation -->
+
+		<!-- body -->
+		<div class="parox-case-detail parox-case">
+        	<!-- jumbotron -->
+			
+			<!-- case detail -->
+			<div class="case-detial">
+				<div class="container">
+					<h2 class="breadcrumb"><span><a href="/index.html">首页</a> &gt; <a href="/index.html">公司</a> &gt; <a href="/news">新闻与活动</a> &gt; 正文</span></h2>
+					<h2 class="title">${news.title}</h2>
+					<div class="date">鹿径 &VerticalBar; ${news.gmtCreated?string("yyyy-MM-dd")}</div>
+					<div class="desc">
+					${news.introduction!暂无内容}
+<!-- <p>截至2015年第一季度末,微信每月活跃用户已达到5.49亿，没有错，5.49亿也错不了。这是微信实打实的活跃用户，庞大的社交人群，相当于200多个小国家的用户总和，超过20种语言用微信交流。事实就是事实，基于微信平台做营销的企业已经有过亿的数量，通过微信快速与社群对接，企业可以实现企业营销互联网化。</p>
+<p>目前市场的微信营销平台不少，但其中大都是单一功能的。有些营销平台，集中于前台运营，重点在图文展示设计;有些重点在微商城，突出平台交易功能;有些只有会员管理，只专注于会员的服务等等。对企业而言，在利用微信展开营销时，迫切需要一个完整的平台，能够帮助企业实现基本的品牌展现、交易、会员服务等所有的功能。专注于为中型企业提供软件、行业解决方案以及企业云服务等全面解决方案的软件公司。基于微信通道的连接服务及管理，打造会员、交易移动管理平台，帮助企业实现创新营销，构建属于企业自己的移动互联世界。</p>
+<p>从市场发展情况看，不管理那种产品和服务，针对服务提供商而言都必须做到：一是拥有优秀的产品，二是提供良好的服务，是SaaS营销策略的核心。越来越多的年轻消费者倾向于手机移动端购物，微信作为移动端重要入口其商业前景愈发显现。多数企业瞄向微信这一全新商业渠道，寄希望线上、线下互动营销摆脱企业困局。鹿径也针对企业的关注问题提供了多模式解决方案，应对不同的业务场景。而且鹿径基于公有云的SaaS运营产品，不需要部署，成本低廉，是企业实现互联网化转型的最佳选择。</p> -->
+
+					</div>
+					<div class="bdsharebuttonbox" style="width:660px;margin:-80px auto 0;">
+						<span style="float:left;line-height:28px;padding-right:10px;">分享到</span>
+						<a href="#" class="bds_more" data-cmd="more"></a>
+						<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+						<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+						<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+						<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					</div>
+					<!-- <a href="http://www.parox.cn/case.html" class="back-to-btn">
+						<span class="icon-right-circle"></span>
+						返回新闻列表
+					</a> -->
+				</div>
+			</div>
+		</div>
+
+		 <!-- footer -->
+	<footer>
+	  <div class="" id="footer">
+	        <div class="container" >
+	        
+	          <div class="row" >
+	            <div class="col-md-4" >
+	                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">公司</h4>
+	                
+	                <h5><a href="/news" class="ft-grey">新闻与活动</a></h5>
+	                <h5><a href="#" class="ft-grey">关于鹿径</a></h5>
+	                <h5 ><a href="/link.html" class="ft-grey">联系我们</a></h5>
+	            </div>
+	            <div class="col-md-4">
+	                
+	                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">关注我们</h4>
+	                
+	                
+	                  <!-- <img src="/img/weibo-135.png"  height="24" width="24"><a href="#" class="ft-grey">&nbsp;&nbsp;&nbsp;&nbsp;微博</a> -->
+	                  
+	                  <img src="/img/weixin-135.png" height="24" width="24">
+	                  <a href="#" class="ft-grey" data-weixin="touch">  
+	                    &nbsp;&nbsp;&nbsp;微信  
+	                      <div id="weixin_QR" hidden>
+	                              <img src="/img/xingba.jpg" style="width:40%;height:40%">
+	                       </div>
+	                    </a>
+	                
+	            </div>
+	            <div class="col-md-4">
+	                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">联系信息</h4>
+	                <h5 class="ft-grey">浙江省杭州市滨江区滨盛路1505号银丰大厦1001室</h5>
+	                <h5 class="ft-grey">400-990-1131 0571-25063082</h5>
+	                <h5 class="ft-grey">0571-25063081</h5>
+	                <h5 class="ft-grey">support@trustway.cn</h5>
+	            </div>
+	          </div>
+	           
+	        </div>
+	    </div>
+	    <!-- copyright -->
+	        <div class="copyright">
+	            <p>Copyright © 2014-2015 杭州鹿径科技有限公司 浙ICP备13020598号-1 浙B2-20140274 </p>
+	        </div>
+	</footer>
+	</div>
+	
+    <script>
+		$(document).ready(function(e) {
+			//the browser adapt
+			var userAgent = navigator.userAgent.toLowerCase();
+			var _system   = window.navigator.userAgent;
+			jQuery.browser = {
+				version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
+				safari: /webkit/.test( userAgent ),
+				opera: /opera/.test( userAgent ),
+				msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+				mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+				Url:'/browser.html'
+			};
+			var _tation=($.browser.safari&& $.browser.version<=500)||($.browser.msie&& $.browser.version<8.0)||($.browser.mozilla && $.browser.version<24.0&& $.browser.version!=11)||($.browser.opera && $.browser.version<11.5);
+			if (_tation) {
+				alert('您的浏览器版本过低，请升级版本');
+				window.location.href = $.browser.Url;
+				if (_system.indexOf('Windows NT 5') > -1) {//xp system
+					$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
+				}
+	
+			}
+			if($.browser.msie && $.browser.version<10.0){//ie 8底下的input框
+				$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+				$('#emailMobile').on('click', function () {
+				$('label[for="emailMobile"]').css({width:"1",height:"1px",color:"#fff",clip:"rect(0, 0, 0, 0)"});
+				});
+				$('#emailMobile').on('blur', function () {
+					if($(this).val()==0){
+						$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+					}
+				});
+			}
+	
+			
+			
+		});
+	
+	</script>
+	<script>
+		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+	<!-- by zwx -->
+     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <script type="text/javascript" >
+      $("a[data-weixin='touch']").mouseover(function(){
+      $("#weixin_QR").show();
+      });
+
+       $("a[data-weixin='touch']").mouseout(function(){
+      $("#weixin_QR").hide();
+      });
+    </script>
 </body>
 </html>
+

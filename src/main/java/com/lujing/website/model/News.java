@@ -6,6 +6,7 @@ public class News extends BaseModel{
 	
 	   private String title;
 	   private String content;
+	   private String introduction;
 	   private String picUrl;
 	   private String author;
 	   
@@ -20,6 +21,14 @@ public class News extends BaseModel{
 		}
 		public void setContent(String content) {
 			this.content = content;
+		}
+		
+		
+		public String getIntroduction() {
+			return introduction;
+		}
+		public void setIntroduction(String introduction) {
+			this.introduction = introduction;
 		}
 		public String getPicUrl() {
 			return picUrl;

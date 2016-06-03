@@ -110,13 +110,15 @@
 	</mvc:interceptors>
 	
 	<!-- 拦截器配置 -->  
-    <mvc:interceptors>
-		<!-- session超时 -->
+    <!-- <mvc:interceptors>
+		session超时
 		<bean class="com.lujing.website.utils.interceptor.MemberContextInterceptor">
 			<property name="loginUrl" value="/login" />
 			<property name="excludeUrls">
 				<list>
 					<value>/testApi*</value>
+					<value>//index.html</value>
+					<value>/news*</value>
 					<value>/login*</value>
 					<value>/css*</value>
 					<value>/awesome*</value>
@@ -126,7 +128,7 @@
 				</list>
 			</property>
 		</bean>
-	</mvc:interceptors> 
+	</mvc:interceptors>  -->
 	
 	
 </beans>

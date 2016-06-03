@@ -11,9 +11,9 @@ public class BaseModel implements Serializable{
 	
 	private Long id;
 	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-	private Date gmtCreate;
+	private Date gmtCreated;
 	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-	private Date gmtModify;
+	private Date gmtModified;
 	
 	public Long getId() {
 		return id;
@@ -21,17 +21,17 @@ public class BaseModel implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Date getGmtCreate() {
-		return gmtCreate;
+	public Date getGmtCreated() {
+		return gmtCreated;
 	}
-	public void setGmtCreate(Date gmtCreate) {
-		this.gmtCreate = gmtCreate;
+	public void setGmtCreated(Date gmtCreated) {
+		this.gmtCreated = gmtCreated;
 	}
-	public Date getGmtModify() {
-		return gmtModify;
+	public Date getGmtModified() {
+		return gmtModified;
 	}
-	public void setGmtModify(Date gmtModify) {
-		this.gmtModify = gmtModify;
+	public void setGmtModified(Date gmtModified) {
+		this.gmtModified = gmtModified;
 	}
 	
 }

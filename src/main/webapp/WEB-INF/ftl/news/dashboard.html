@@ -1,10 +1,315 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>新闻与活动 - 鹿径科技</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="鹿径是一个提供出行服务的互联网公司" />
+	<meta name="keywords" content="鹿径,出行,服务,违章查询,路况查询" />
+	<meta name="author" content="鹿径|鹿径科技" />
+	<meta name="application-name" content="行吧" />
+	<link rel="shortcut icon" href="http://www.parox.cn/images/favicon.ico">
+	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/bootstrap.css" media="screen">
+	<link href="http://www.parox.cn/res_base/mhcms_com_www/dm/article/css/common.css" type="text/css" rel="stylesheet" />
+	<script src="http://www.parox.cn/js/lib/jquery/jquery-1.10.2.min.js"></script>
+	<script src="http://www.parox.cn/js/lib/bootstrap/bootstrap.min.js"></script>
+
+
+	<!-- byzwx-->
+	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	   <link rel="stylesheet" href="http://www.parox.cn/css/css2.0/parox-base.css" media="screen">
+	    <link href="/css/style.css" rel="stylesheet">
+	    <link href="/css/lujin-home.css" rel="stylesheet">
+	    <link href="/css/parox-base.css" rel="stylesheet">
+	    <link rel="stylesheet" href="http://www.parox.cn/css/css2.0/pre2-parox-home.css?v20151021" media="screen">
+	    <!-- byzwx-->
+    <!--[if lt IE 9]>
+    	<script src="http://www.parox.cn/js/compatibility/ie8-responsive-file-warning.js"></script>
+    	<script src="http://www.parox.cn/js/compatibility/html5shiv.min.js"></script>
+    	<script src="http://www.parox.cn/js/compatibility/respond.js"></script>
+    <![endif]-->
+    <script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7adf4f36aac22b99b592f1d2fa497c81";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+
+<body  data-spy="scroll" data-target="#rock-navigation">
+<#assign baseUrl="localhost:8080"/>
+	<div>
+		<!-- navacation -->
+		<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px"role="navigation" >
+		    <div class="container" >
+
+		      <div class="navbar-header"  >
+		        <button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
+		          <span class="icon icon-bar"></span>
+		          <span class="icon icon-bar"></span>
+		          <span class="icon icon-bar"></span>
+		        </button>
+		        <img  src="/img/logo.png"  style="width:60px;height:60px">
+		      </div>
+		      <nav class="collapse navbar-collapse" id="rock-navigation"  >
+		        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase" >
+		          <li class="active"><a href="/index.html" class="f-white-lg" >首页</a></li>
+		          <li><a href="#" class="f-white-lg" >新闻</a></li>
+		          <li><a href="#portfolio" class="f-white-lg">招聘</a></li><!-- smoothScroll  -->
+		        </ul>
+		      </nav>
+
+		    </div>
+		  </div>
+		  <!-- navacation -->
+
+		<!-- body -->
+		<div class="parox-case">
+			<!-- jumbotron -->
+			<div class="case-jumbotron">
+				<div class="container text-center">
+					<h2 class="title fadeIn">行吧—汽车出行,汽车服务一网打尽！</h2>
+					<p class="desc fadeIn">出行消息，违章处理，事故处理，尽在行吧app。</p>
+				</div>
+			</div>
+			<!-- case list -->
+			<div class="case">
+				<div class="container" role="tabpanel">
+					<h2 class="breadcrumb"><span><a href="${baseUrl}/index.html">首页</a> &gt; <a href="${baseUrl}/index.html">公司</a> &gt; <a href="${baseUrl}/news/1">新闻与活动</a></span></h2>
+					<div class="tab-content">
+                    	<!--content1-->
+						<div class="tab-pane fade in active" id="ls-all">
+
+<ul class="case-list">
+<#list newsList as news>
+	<li>
+		<div class="media">
+			<div class="case-img">
+				<a href="${baseUrl}/news/${news.id}" target="_blank">
+					<div class="cover">
+						<div class="readmore">
+							阅读更多
+							<span></span>
+						</div>
+					</div>
+					<#if news.picUrl??>
+					<img src="${news.picUrl}"  style="width:139px;height:94px"/>
+					<#else>
+					<img src="/img/default_news.jpg"  style="width:139px;height:94px"/>
+					</#if>
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="title"><a href="${baseUrl}/news/${news.id}" target="_blank">${news.title!佚名}</a></h4>
+				<p class="desc">
+				${news.introduction!"暂无简介"}
+				</p>
+				<span class="date"><em class="em2">
+				<#if news.gmtModified??>
+				${news.gmtModified?string("yyyy-MM-dd")}
+				<#else>
+				2016-2-2
+				</#if>
+				
+				</em></span>
+			</div>
+		</div>
+	</li>
+	</#list>
+
+
+ </ul>
+
+<div class="num">
+	
+	
+	<!--分页  -->
+	<#if pageNum=1>
+	<a href="#">
+	<#else>
+	<a href="${baseUrl}/news/page/${pageNum-1}">
+	</#if>
+	上一页</a>
+	&nbsp;&nbsp;
+	
+	<!-- 页码  -->
+	<!--如果页数小于5页，所有都显示  -->
+	<#if pageCount lt 5>
+		<#list 1..pageCount as num>
+			<#if num=pageNum>
+			<a href="#" class="choose" target="_blank">${num}</a>&nbsp;&nbsp;
+			<#else>
+			<a href="${baseUrl}/news/page/${num}.htm" target="_blank">${num}</a>&nbsp;&nbsp;
+			</#if> 
+		</#list>
+			
+	<#else>
+	<!--如果页数大于5页，当前为第一页 -->
+		<#if pageNum=1>
+			<a class="choose">1</a>&nbsp;&nbsp;
+			<a href="${baseUrl}/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
+			<a href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+	<!-- 如果页数大于5页，当前为最后一页  -->
+		<#elseif pageNum=pageCount>
+			<a  href="${baseUrl}/news/page/1">1</a>&nbsp;&nbsp;
+			<a href="${baseUrl}/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
+			<a href="${baseUrl}/news/page/${pageCount-1}">${pageCount-1}</a>&nbsp;&nbsp;
+			<a class="choose" href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+		
+	<!-- 如果页数大于5页，当前为中间的某一页  -->
+		<#else>
+			<a  href="${baseUrl}/news/page/1">1</a>&nbsp;&nbsp;<span>...</span>
+			<a href="${baseUrl}/news/page/${pageNum-1}">${pageNum-1}</a>&nbsp;&nbsp;
+			<a class="choose" href="${baseUrl}/news/page/${pageNum}">${pageNum}</a>&nbsp;&nbsp;
+			<a href="${baseUrl}/news/page/${pageNum+1}">${pageNum+1}</a>&nbsp;&nbsp;
+			<span>...</span>
+			<a href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+		</#if>
+	</#if>
+	
+	<!-- 下一页  -->
+	<#if pageNum=pageCount>
+	<a href="#">
+	<#else>
+	<a href="${baseUrl}/news/page/${pageNum+1}">
+	</#if>
+	下一页 </a>
+	
+	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- footer -->
+		 <!-- footer -->
+<footer>
+  <div class="" id="footer">
+        <div class="container" >
+        
+          <div class="row" >
+            <div class="col-md-4" >
+                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">公司</h4>
+                
+                <h5><a href="#" class="ft-grey">新闻与活动</a></h5>
+                <h5><a href="/index.html" class="ft-grey">关于鹿径</a></h5>
+                <h5 ><a href="/link.html" class="ft-grey">联系我们</a></h5>
+            </div>
+            <div class="col-md-4">
+                
+                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">关注我们</h4>
+                
+                  <img src="/img/weixin-135.png" height="24" width="24">
+                  <a href="#" class="ft-grey" data-weixin="touch">  
+                    &nbsp;&nbsp;&nbsp;微信  
+                      <div id="weixin_QR" class="wechat" hidden>
+                                            <!-- <img src="http://www.parox.cn/images/images1.6/home/weixin-getqrcode.jpg"> -->
+                                            <img src="/img/xingba.jpg" style="width:40%;height:40%">
+                       </div>
+                    </a>
+                
+            </div>
+            <div class="col-md-4">
+                <h4 class="ft-grey" style="margin-bottom:20px;margin-top:30px;">联系信息</h4>
+                <h5 class="ft-grey">浙江省杭州市滨江区滨盛路1505号银丰大厦1001室</h5>
+                <h5 class="ft-grey">400-990-1131 0571-25063082</h5>
+                <h5 class="ft-grey">0571-25063081</h5>
+                <h5 class="ft-grey">support@trustway.cn</h5>
+            </div>
+          </div>
+           
+        </div>
+    </div>
+    <!-- copyright -->
+        <div class="copyright">
+            <p>Copyright © 2014-2015 杭州道曼科技有限公司 浙ICP备13020598号-1 浙B2-20140274 </p>
+        </div>
+</footer>
+	</div>
+    
+<!-- by zwx -->
+     <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/jquery.nav.js"></script>
+    <script src="/js/custom.js"></script>
+
+
+    <script type="text/javascript" >
+      $("a[data-weixin='touch']").mouseover(function(){
+      $("#weixin_QR").show();
+      });
+
+       $("a[data-weixin='touch']").mouseout(function(){
+      $("#weixin_QR").hide();
+      });
+	/*by zwx*/	
+
+
+		$(document).ready(function(e) {
+			//the browser adapt
+			var userAgent = navigator.userAgent.toLowerCase();
+			var _system   = window.navigator.userAgent;
+			jQuery.browser = {
+				version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
+				safari: /webkit/.test( userAgent ),
+				opera: /opera/.test( userAgent ),
+				msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+				mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+				Url:'/browser.html'
+			};
+			var _tation=($.browser.safari&& $.browser.version<=500)||($.browser.msie&& $.browser.version<8.0)||($.browser.mozilla && $.browser.version<24.0&& $.browser.version!=11)||($.browser.opera && $.browser.version<11.5);
+			if (_tation) {
+				alert('您的浏览器版本过低，请升级版本');
+				window.location.href = $.browser.Url;
+				if (_system.indexOf('Windows NT 5') > -1) {//xp system
+					$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
+				}
+	
+			}
+			if($.browser.msie && $.browser.version<10.0){//ie 8底下的input框
+				$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+				$('#emailMobile').on('click', function () {
+					$('label[for="emailMobile"]').css({width:"1",height:"1px",color:"#fff",clip:"rect(0, 0, 0, 0)"});
+				});
+				$('#emailMobile').on('blur', function () {
+					if($(this).val()==0){
+						$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+					}
+				});
+			}
+	
+			
+			//the system adapt
+			var system = {
+				win: false,
+				mac: false,
+				xll: false,
+				ipad:false,
+				mobile:false
+			};
+			var p = navigator.platform;
+			system.win = p.indexOf("Win") == 0;
+			system.mac = p.indexOf("Mac") == 0;
+			system.xll = (p == "X11") || (p.indexOf("Linux") == 0);
+			system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+			system.mobile = (navigator.userAgent.toLowerCase().match(/mobile/)=='mobile')?true:false;
+			if (system.mobile) {
+				window.location.href = "http://www.parox.cn/mobile.html";
+			}
+			
+			
+		//$('#ls-tab a:last').tab('show')
+		});
+	
+	</script>
 </body>
 </html>
+

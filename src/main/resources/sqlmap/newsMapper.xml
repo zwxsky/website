@@ -5,6 +5,7 @@
 	    `news`.`id`,
 	    `news`.`title`,
 	    `news`.`content`,
+	    `news`.`introduction`,
 	    `news`.`pic_url` as picUrl,
 	    `news`.`author`,
 	    `news`.`gmt_created` as gmtCreated,
@@ -23,6 +24,12 @@
 		</if>
 	</sql>
 	
+	<sql id="news_cond">
+		<if test="cond.author!=null">
+			and author=#{cond.author}
+		</if>
+	</sql>
+	
 	<select id="queryModel" resultType="com.lujing.website.model.News">
 		select <include refid="default_column"/>
 		from news
@@ -32,6 +39,7 @@
 		insert into news(
 			   title,
 			   content,
+			   introduction,
 			   picUrl,
 			   author,
 			   gmtCreated,
@@ -40,16 +48,23 @@
 		value(
 				#{title},
 				#{content},
+				#{introduction},
 				#{picUrl},
 				#{author},
 				now(),now()
 		)
 	</insert>
 	
-	<select id="queryByPager" resultType="com.lujing.website.model.News">
+	<select id="pagerModel" resultType="com.lujing.website.model.NewsModel">
 		select <include refid="default_column"/>
 		from news
 		<include refid="pager_cond"/>
+	</select>
+	
+	<select id="countByCond" resultType="java.lang.Integer">
+		select count(id)
+		from news
+		<include refid="news_cond"/>
 	</select>
 </mapper>
 
