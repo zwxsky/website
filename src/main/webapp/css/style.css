@@ -1,6 +1,7 @@
-/* a{ color:#d0d0d0; text-decoration:none;}
-a:hover{ color:#FFFFFF; text-decoration:underline;}
-a:active{ color:#30F;} */
+/*  a{ color:#d0d0d0; text-decoration:none;}
+a:hover{ color:#0000E3}
+a.border-style: none
+a:active{ color:#30F;}  */
 
 #header{
 	/*background-image:  url(https://d6es4q93bwfk.cloudfront.net/img/heros/hero-home-2.jpg);*/

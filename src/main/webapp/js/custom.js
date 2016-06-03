@@ -80,8 +80,10 @@ jQuery(document).ready(function($){
         });
         else $('.sticky-navigation').stop().animate({
             "opacity": '0.3',
-            "top": '-75'
+            "top": '-75
+            	
         });
+      
     }
 
 
