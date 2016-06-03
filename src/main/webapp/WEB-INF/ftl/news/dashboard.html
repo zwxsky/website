@@ -23,7 +23,6 @@
 	    <link href="/css/style.css" rel="stylesheet">
 	    <link href="/css/lujin-home.css" rel="stylesheet">
 	    <link href="/css/parox-base.css" rel="stylesheet">
-	    <link rel="stylesheet" href="http://www.parox.cn/css/css2.0/pre2-parox-home.css?v20151021" media="screen">
 	    <!-- byzwx-->
     <!--[if lt IE 9]>
     	<script src="http://www.parox.cn/js/compatibility/ie8-responsive-file-warning.js"></script>
@@ -61,7 +60,7 @@
 		        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase" >
 		          <li class="active"><a href="/index.html" class="f-white-lg" >首页</a></li>
 		          <li><a href="#" class="f-white-lg" >新闻</a></li>
-		          <li><a href="#portfolio" class="f-white-lg">招聘</a></li><!-- smoothScroll  -->
+		          <li><a href="/recruit.html" class="f-white-lg">招聘</a></li><!-- smoothScroll  -->
 		        </ul>
 		      </nav>
 
@@ -81,7 +80,7 @@
 			<!-- case list -->
 			<div class="case">
 				<div class="container" role="tabpanel">
-					<h2 class="breadcrumb"><span><a href="${baseUrl}/index.html">首页</a> &gt; <a href="${baseUrl}/index.html">公司</a> &gt; <a href="${baseUrl}/news/1">新闻与活动</a></span></h2>
+					<h2 class="breadcrumb"><span><a href="/index.html">首页</a> &gt; <a href="/index.html">公司</a> &gt; <a href="/news/1">新闻与活动</a></span></h2>
 					<div class="tab-content">
                     	<!--content1-->
 						<div class="tab-pane fade in active" id="ls-all">
@@ -91,7 +90,7 @@
 	<li>
 		<div class="media">
 			<div class="case-img">
-				<a href="${baseUrl}/news/${news.id}" target="_blank">
+				<a href="/news/${news.id}" target="_blank">
 					<div class="cover">
 						<div class="readmore">
 							阅读更多
@@ -106,7 +105,7 @@
 				</a>
 			</div>
 			<div class="media-body">
-				<h4 class="title"><a href="${baseUrl}/news/${news.id}" target="_blank">${news.title!佚名}</a></h4>
+				<h4 class="title"><a href="/news/${news.id}" target="_blank">${news.title!佚名}</a></h4>
 				<p class="desc">
 				${news.introduction!"暂无简介"}
 				</p>
@@ -133,7 +132,7 @@
 	<#if pageNum=1>
 	<a href="#">
 	<#else>
-	<a href="${baseUrl}/news/page/${pageNum-1}">
+	<a href="/news/page/${pageNum-1}">
 	</#if>
 	上一页</a>
 	&nbsp;&nbsp;
@@ -145,7 +144,7 @@
 			<#if num=pageNum>
 			<a href="#" class="choose" target="_blank">${num}</a>&nbsp;&nbsp;
 			<#else>
-			<a href="${baseUrl}/news/page/${num}.htm" target="_blank">${num}</a>&nbsp;&nbsp;
+			<a href="/news/page/${num}" target="_blank">${num}</a>&nbsp;&nbsp;
 			</#if> 
 		</#list>
 			
@@ -153,23 +152,23 @@
 	<!--如果页数大于5页，当前为第一页 -->
 		<#if pageNum=1>
 			<a class="choose">1</a>&nbsp;&nbsp;
-			<a href="${baseUrl}/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
-			<a href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+			<a href="/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
+			<a href="/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
 	<!-- 如果页数大于5页，当前为最后一页  -->
 		<#elseif pageNum=pageCount>
-			<a  href="${baseUrl}/news/page/1">1</a>&nbsp;&nbsp;
-			<a href="${baseUrl}/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
-			<a href="${baseUrl}/news/page/${pageCount-1}">${pageCount-1}</a>&nbsp;&nbsp;
-			<a class="choose" href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+			<a  href="/news/page/1">1</a>&nbsp;&nbsp;
+			<a href="/news/page/2">2</a>&nbsp;&nbsp;<span>...</span>
+			<a href="/news/page/${pageCount-1}">${pageCount-1}</a>&nbsp;&nbsp;
+			<a class="choose" href="/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
 		
 	<!-- 如果页数大于5页，当前为中间的某一页  -->
 		<#else>
-			<a  href="${baseUrl}/news/page/1">1</a>&nbsp;&nbsp;<span>...</span>
-			<a href="${baseUrl}/news/page/${pageNum-1}">${pageNum-1}</a>&nbsp;&nbsp;
-			<a class="choose" href="${baseUrl}/news/page/${pageNum}">${pageNum}</a>&nbsp;&nbsp;
-			<a href="${baseUrl}/news/page/${pageNum+1}">${pageNum+1}</a>&nbsp;&nbsp;
+			<a  href="/news/page/1">1</a>&nbsp;&nbsp;<span>...</span>
+			<a href="/news/page/${pageNum-1}">${pageNum-1}</a>&nbsp;&nbsp;
+			<a class="choose" href="/news/page/${pageNum}">${pageNum}</a>&nbsp;&nbsp;
+			<a href="/news/page/${pageNum+1}">${pageNum+1}</a>&nbsp;&nbsp;
 			<span>...</span>
-			<a href="${baseUrl}/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
+			<a href="/news/page/${pageCount}">${pageCount}</a>&nbsp;&nbsp;
 		</#if>
 	</#if>
 	
@@ -177,7 +176,7 @@
 	<#if pageNum=pageCount>
 	<a href="#">
 	<#else>
-	<a href="${baseUrl}/news/page/${pageNum+1}">
+	<a href="/news/page/${pageNum+1}">
 	</#if>
 	下一页 </a>
 	
