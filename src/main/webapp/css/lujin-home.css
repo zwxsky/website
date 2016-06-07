@@ -14,6 +14,11 @@
 .parox-case .case-nav li:focus a { background-color: #f9f9f9; }
 .parox-case .case-nav li.active a { background-color: #0893d2; border-color: #0893d2; color: #fff; }
 
+.parox-case .breadcrumb {
+  background: transparent;
+  padding: 20px 0 10px;
+}
+
 .parox-nav .parox-nav-logo { box-sizing: content-box; display: block; height: 30px; line-height: 30px; padding: 5px 30px; }
 .parox-nav .parox-nav-logo img { width: auto; height: 30px; }
 

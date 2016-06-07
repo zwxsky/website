@@ -1,10 +1,9 @@
-/*  a{ color:#d0d0d0; text-decoration:none;}
-a:hover{ color:#0000E3}
-a.border-style: none
-a:active{ color:#30F;}  */
+#footer  a +a{ color:#d0d0d0; text-decoration:none;}
+#footer  a:hover{ color:#FFFFFF;border-style: none}
+
+#rock-navigation  a:hover{ color:#FFFFFF;border-style: none}
 
 #header{
-	/*background-image:  url(https://d6es4q93bwfk.cloudfront.net/img/heros/hero-home-2.jpg);*/
 	background-image:  url(/img/background.jpg);
 	background-size:100% 100%;
 	padding-left: 0px;
@@ -22,13 +21,12 @@ a:active{ color:#30F;}  */
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 40px;
 
 }
 
 .ft-white{
 	color:#FFFFFF;
-	
 	}
 	
 .ft-grey{
@@ -73,7 +71,6 @@ a:active{ color:#30F;}  */
 .f-red{
 	  font-size: 64px;
 	  color: #FF7800;
-	  margin-left: 40px;
 	  text-align: center;
 	  margin-top: 30px;
 }
@@ -81,13 +78,18 @@ a:active{ color:#30F;}  */
 .f-black{
 	  font-size: 50px;
 	  color: #6c7275;
-	  margin-left: 40px;
 	   text-align: center;
 }
 
 .f-white-lg{
 	  font-size: 24px;
 	  color: #FFFFFF;
+	   text-align: center;
+}
+
+.f-grey-lg{
+	  font-size: 24px;
+	  color: #ADADAD;
 	   text-align: center;
 
 }
@@ -106,3 +108,14 @@ a:active{ color:#30F;}  */
 	text-align: right;
 }
 
+.wechat {
+  position: absolute;
+  top: -80px;
+  left: -0px;
+  display: none;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.538462;
+}
