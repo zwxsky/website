@@ -34,7 +34,7 @@
 
   <body  data-spy="scroll" data-target="#rock-navigation">
 <!-- navacation -->
-<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px;width:1845px" role="navigation" >
+<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px;width:100%" role="navigation" >
     <div class="container" >
 
       <div class="navbar-header"  >
@@ -43,9 +43,9 @@
           <span class="icon icon-bar"></span>
           <span class="icon icon-bar"></span>
         </button>
-        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;opacity:1" >
+        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;margin-right:40px;opacity:1" >
       </div>
-      <nav class="collapse navbar-collapse navbar-left" style="margin-left:40px" id="rock-navigation"  >
+      <nav class="collapse navbar-collapse navbar-left" id="rock-navigation"  >
         <ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
           <li class="active" style="margin-top:10px;opacity:1;"><a href="#" class="f-white-lg" style="background-color:transparent">首页</a></li>
           <li style="margin-top:10px;"><a href="/news" class="f-grey-lg" style="background-color:transparent">新闻</a></li>
@@ -59,19 +59,17 @@
 
   <!-- body -->
 
-  <div class="row" style="width:1845px" id="header" >
+  <div class="row" style="width:100%" id="header" >
            <div class="col-md-3" >
            </div> 
 
-           <div class="col-md-3 col-xs-6" >
-
+           <div class="col-md-3 col-sm-6 col-xs-12" >
              <img src="img/phone-01.png" class="img-responsive" alt="phone image" style="margin-top:150px"> 
            </div> 
 
-           <div class="col-md-3 col-xs-6">
-              <p class="f-travel">为<font style="color:#FF8000"><b>汽车出行</b></font>提供</p>
-              <p class="f-travel"> &nbsp;&nbsp;更安全的信息</p>
-              <button type="buttion" class="btn-online"  >&nbsp;&nbsp;&nbsp;&nbsp;即将上线&nbsp;&nbsp;&nbsp;</button>
+           <div class="col-md-3 col-xs-12 col-sm-6">
+              <p class="f-travel center-block"><b><font style="color:#FF8000">分享于心，服务出行!</font></b></p>
+              <button type="buttion" class="btn-online center-block"  >&nbsp;&nbsp;&nbsp;&nbsp;即将上线&nbsp;&nbsp;&nbsp;</button>
            </div> 
 
           <div class="col-md-3">
@@ -79,32 +77,32 @@
   </div>
 
    
-  <div class="row"  style="height:250px;width:1845px" >
+  <div class="row col-xs-6 col-sm-6"  style="height:300px;width:100%" >
+      <br>
       <p class="f-red">&nbsp;为&nbsp;你&nbsp;爱&nbsp;车</p>
-
        <p class="f-black">提供"最便捷"的服务</p> 
-       <br><br>
+       
   </div>
 
-  <div class="row">
-      <div class="col-md-3 col-xs-6" >
+  <div class="row" style="width:100%" >
+      <div class="col-md-3 col-xs-12 col-sm-6" >
           <img src="img/lllegal.jpg" alt="lllegal fast processing" style="width:460px;height:494px">
       </div>
 
-      <div class="col-md-3 col-xs-6" style="background:url(/img/lllegalB.jpg);height:494px;width:460px;">
-          <p class="f-white-lg tl" style="margin-top:110px" >违法快处理</p>
-          <p class="f-white-md tl">违章快速处理找家放心的！</p>
-          <p class="f-white-md tl">交通违章罚款，快捷高效。</p>
+      <div class="col-md-3 col-xs-12 col-sm-6" style="background:url(/img/lllegalB.jpg);height:494px;width:460px;">
+          <p class="f-white-lg tl" style="margin-top:110px" >&nbsp;&nbsp;&nbsp;&nbsp;违法快处理</p>
+          <p class="f-white-md tl">&nbsp;&nbsp;&nbsp;&nbsp;违章快速处理找家放心的！</p>
+          <p class="f-white-md tl">&nbsp;&nbsp;&nbsp;&nbsp;交通违章罚款，快捷高效。</p>
       </div>
 
-      <div class="col-md-3 col-xs-6" style="background:url(/img/accidentB.jpg);height:494px;width:460px;">
-          <p class="f-white-lg tr" style="margin-top:200px">事故快处理</p>
-          <p class="f-white-md tr">轻微交通事故，处理既费时又麻烦</p>
-          <p class="f-white-md tr">来“掌上”快速处理吧</p>
+      <div class="col-md-3 col-xs-12 col-sm-6" style="background:url(/img/accidentB.jpg);height:494px;width:460px;">
+          <p class="f-white-lg tr" style="margin-top:200px">事故快处理&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p class="f-white-md tr">轻微交通事故，处理既费时又麻烦&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p class="f-white-md tr">来“掌上”快速处理吧&nbsp;&nbsp;&nbsp;&nbsp;</p>
       </div>
 
-      <div class="col-md-3 col-xs-6"  style="padding-left:0px">
-          <img src="img/accident.jpg" alt="accident fast processing" style="width:460px;height:494px">
+      <div class="col-md-3 col-xs-12 col-sm-6"  style="padding-left:0px">
+          <img src="img/accident.jpg" alt="accident fast processing" style="width:486px;height:494px">
       </div>
   </div>
        
@@ -173,6 +171,63 @@
        $("a[data-weixin='touch']").mouseout(function(){
       $("#weixin_QR").hide();
       });
+       
+       
+   	$(document).ready(function(e) {
+		//the browser adapt
+		var userAgent = navigator.userAgent.toLowerCase();
+		var _system   = window.navigator.userAgent;
+		jQuery.browser = {
+			version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
+			safari: /webkit/.test( userAgent ),
+			opera: /opera/.test( userAgent ),
+			msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+			mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+			Url:'/browser.html'
+		};
+		var _tation=($.browser.safari&& $.browser.version<=500)||($.browser.msie&& $.browser.version<8.0)||($.browser.mozilla && $.browser.version<24.0&& $.browser.version!=11)||($.browser.opera && $.browser.version<11.5);
+		if (_tation) {
+			alert('您的浏览器版本过低，请升级版本');
+			window.location.href = $.browser.Url;
+			if (_system.indexOf('Windows NT 5') > -1) {//xp system
+				$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
+			}
+
+		}
+		if($.browser.msie && $.browser.version<10.0){//ie 8底下的input框
+			$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+			$('#emailMobile').on('click', function () {
+				$('label[for="emailMobile"]').css({width:"1",height:"1px",color:"#fff",clip:"rect(0, 0, 0, 0)"});
+			});
+			$('#emailMobile').on('blur', function () {
+				if($(this).val()==0){
+					$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
+				}
+			});
+		}
+
+		
+		//the system adapt
+		var system = {
+			win: false,
+			mac: false,
+			xll: false,
+			ipad:false,
+			mobile:false
+		};
+		var p = navigator.platform;
+		system.win = p.indexOf("Win") == 0;
+		system.mac = p.indexOf("Mac") == 0;
+		system.xll = (p == "X11") || (p.indexOf("Linux") == 0);
+		system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+		system.mobile = (navigator.userAgent.toLowerCase().match(/mobile/)=='mobile')?true:false;
+		if (system.mobile) {
+			window.location.href = "localhost:8080/index";
+		}
+		
+	//$('#ls-tab a:last').tab('show')
+	});
+
     </script>
   </body>
 </html>

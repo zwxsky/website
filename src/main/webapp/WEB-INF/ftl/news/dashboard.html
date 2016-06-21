@@ -48,17 +48,17 @@
 		    <div class="container" >
 
 		      <div class="navbar-header"  >
-		        <button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
 		          <span class="icon icon-bar"></span>
 		          <span class="icon icon-bar"></span>
 		          <span class="icon icon-bar"></span>
 		        </button>
-		        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;opacity:1">
+		        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;margin-right:40px;opacity:1">
 		      </div>
-		      <nav class="collapse navbar-collapse navbar-left" style="margin-left:40px" id="rock-navigation"  >
+		      <nav class="collapse navbar-collapse navbar-left"  id="rock-navigation"  >
 		        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase" >
-		          <li style="margin-top:10px;"><a href="/index.html" class="f-grey-lg" style="background-color:transparent">首页</a></li>
-		          <li  class="active" style="margin-top:10px;opacity:1;"><a href="#" class="f-white-lg" style="background-color:transparent">新闻</a></li>
+		          <li style="margin-top:10px;background-color:transparent"><a href="/index.html" class="f-grey-lg" style="background-color:transparent">首页</a></li>
+		          <li class="active" style="margin-top:10px;"><a href="#" class="f-white-lg" style="background-color:transparent">新闻</a></li>
 		          <li style="margin-top:10px;"><a href="/recruit.html" class="f-grey-lg" style="background-color:transparent">招聘</a></li><!-- smoothScroll  -->
 		        </ul>
 		      </nav>
@@ -72,7 +72,8 @@
 			<!-- jumbotron -->
 			<div class="case-jumbotron">
 				<div class="container text-center">
-					<h2 class="title fadeIn">行吧—汽车出行消息,汽车服务一网打尽！</h2>
+					<!-- <h2 class="title fadeIn">行吧—汽车出行消息,汽车服务一网打尽！</h2> -->
+					<h2 class="title fadeIn">行吧—分享于心，服务出行!</h2>
 					<p class="desc fadeIn">汽车出行消息，违法处理，事故快处理，尽在行吧app。</p>
 				</div>
 			</div>
@@ -241,6 +242,7 @@
 
 
     <script type="text/javascript" >
+    /*by zwx*/	
       $("a[data-weixin='touch']").mouseover(function(){
       $("#weixin_QR").show();
       });
@@ -300,9 +302,8 @@
 			system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
 			system.mobile = (navigator.userAgent.toLowerCase().match(/mobile/)=='mobile')?true:false;
 			if (system.mobile) {
-				window.location.href = "http://www.parox.cn/mobile.html";
+				window.location.href = "localhost:8080/news";
 			}
-			
 			
 		//$('#ls-tab a:last').tab('show')
 		});
