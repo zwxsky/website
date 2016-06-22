@@ -82,7 +82,7 @@
 }
 
 .f-white-lg{
-	  font-size: 24px;
+	  font-size: 36px;
 	  color: #FFFFFF;
 	   text-align: center;
 }
@@ -118,4 +118,11 @@
 h4 {
   font-size: 18px;
   line-height: 1.538462;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 1.538462;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

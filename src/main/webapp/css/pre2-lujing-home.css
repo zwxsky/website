@@ -543,7 +543,7 @@ body {}
 .parox-about { background: #f2f2f2; border-bottom: 8px solid #0893d2; }
 .parox-about .about-jumbotron { background-image: url('/img/lujing-about.png'); background-size: cover; background-position: center top; min-height: 580px; }
 .parox-about .about-jumbotron .container { position: relative; }
-.parox-about .about-jumbotron .title { font-size: 54px; color: #fff; position: absolute; left: 300px; top: 300px; z-index: 99; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; }
+.parox-about .about-jumbotron .title { font-size: 54px; color: #fff; position: absolute; top: 300px; z-index: 99; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; }
 .parox-about .about-jumbotron .img { position: absolute; right: 0; top: 180px; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; }
 .parox-about .about-jumbotron .title.fadeIn { -webkit-animation: moveRight 2s; animation: moveRight 2s;  }
 .parox-about .about-jumbotron .img.fadeIn { -webkit-animation: moveLeft 2s; animation: moveLeft 2s; }

@@ -2,8 +2,8 @@
 .parox-case { background-color: #fff; border-bottom: 8px solid #0893d2; }
 .parox-case .case-jumbotron { background-image: url("/img/bground_news.jpg"); background-size: cover; background-position: center top; min-height: 580px; }
 
-.parox-case .case-jumbotron .title { font-size: 36px; color: #fff; padding-top: 220px; }
-.parox-case .case-jumbotron .desc { font-size: 20px; color: rgba(255,255,255,0.9); padding-top: 40px; }
+.parox-case .case-jumbotron .title { font-size: 48px; color: #fff; padding-top: 220px; }
+.parox-case .case-jumbotron .desc { font-size: 26px; color: rgba(255,255,255,0.9); padding-top: 40px; }
 .parox-case .case-jumbotron .title.fadeIn { -webkit-animation: moveDownShort 2s; animation: moveDownShort 2s; }
 .parox-case .case-jumbotron .desc.fadeIn { -webkit-animation: moveUpShort 2s; animation: moveUpShort 2s; }
 
@@ -23,7 +23,7 @@
 .parox-nav .parox-nav-logo img { width: auto; height: 30px; }
 
 
-.case-list li:first-child { border-top: 1px solid #f2f2f2; }
+.case-list li:first-child { border-top: 1px solid #f2f2f2; min-height:400px}
 .case-list li { border-bottom: 1px solid #f2f2f2; padding-top: 25px; padding-bottom: 25px; }
 .case-list li .media { margin-right: 20px; }
 .case-list li .media .pull-right { margin-left: 40px !important; }
