@@ -682,9 +682,9 @@ a.weixin:hover .wechat {
 .has-error.verifytip { color:#db4437}
 .has-success.verifytip { color:#4cae4c}
 
-.hire_imgauto{ width:540px; height:400px}
-.hire_ios{background-color: #1177c1 !important;padding-top: 20px;}
-.hire_pm{background-color: #e86105 !important;padding-top: 20px;}
+.hire_imgauto{ width:420px; height:310px}
+.hire_ios{background-color: #f8f8f8 !important;padding-top: 20px;}
+.hire_pm{background-color: #e0e0e0 !important;}
 .hire_java{background-color: #7056ce !important;padding-top: 20px;}
 .hire_test{background-color: #0a4595 !important;padding-top: 20px;}
 .hire_visual{background-color: #eb125f !important;padding-top: 20px;}
