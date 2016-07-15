@@ -7,65 +7,35 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="http://m.weiche.me/css/index.css">
-<script src="js/swipe.min.js"></script>
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/idangerous.swiper.min.js"></script>
 <script>
-(function () {
-    var ua = navigator.userAgent.toLowerCase();
-    console.log("navigator.userAgent"+ua);
-    if(ua.match(/MicroMessenger/i)=="micromessenger") {
-        var url = window.location.href;
-        var check = "#mp.weixin.qq.com";
-        var pos = url.lastIndexOf("#");
-        if (pos > -1) {
-            var flag = url.substr(pos);
-            if (flag != check) {
-                url += check;
-                location.replace(url);
-                location.reload();
-            }
-        } else {
-            url += check;
-            location.replace(url);
-            location.reload();
-        }
-    }
-})();
+
 </script>
 <script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#b75070dc3c1f67ae7be058c69a4cda6f"></script><script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: '1f36d4b3947b35fb4b74d0af'});</script>
+<style>
+.swiper-slide {
+	line-height: 300px;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+}
+</style>
 </head>
-<body onload="addclass();clickURL();">
+<body onload="">
     <div id="wrap">
         <div id="nav">
-            <img id="logo" src="img/logo12.png"/>
+            <img id="logo" style="width:50px;height:50;margin-top:10px" src="img/logo12.png"/>
             <a href="http://www.lujingkeji.com/"><img id="homepage" src="img/home.jpg"/></a>
         </div>
 
-        <div id="downlist">
-            <div class="swipe-wrap">
-                <div><img id="banner" src="img/lllegal.jpg"/></div>
-                <div><img id="banner" src="img/accident.jpg"/></div>
-                <div><img id="banner" src="img/recommend/3.jpg"/></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img id="banner" src="img/recommend/1.jpg"/></div>
+                <div class="swiper-slide"><img id="banner" src="img/recommend/2.jpg"/></div>
             </div>
         </div>
 
-     
-
-        <div id="icon-position">
-            <span class="icon-point">&bull;</span>
-            <span>&bull;</span>
-            <span>&bull;</span>
-        </div>
-        <div id="code">
-            <img id="download-img" src="img/m_download.jpg" alt="扫描二维码"/>
-            <img id="ios-download-img" src="http://img.buding.cn/weiche/2016/02/29/075b96445ae0b08b531363e0825b4603.jpg" alt="扫描二维码"/>
-            <div id="ios"></div>
-            <div id="android"></div>
-        </div>
-        <div id="code-android-only"></div>
-        <div id="code-android-ios-only">
-            <div id="ios-download"></div>
-            <div id="android-download"></div>
-        </div>
         <div id="intro">
             <img src="http://img.buding.cn/weiche/2015/08/31/af52963a504a7a23f9e92a45aee8dd87.png" alt=""/>
             <p>违法快处理</p>
@@ -83,165 +53,17 @@
         </div>
         <div id="footer">
             <div id="note">
-                <p id="app-store">“微车”是<span>腾讯手机助手、360安全手机卫士、豌豆荚</span>认证的安全应用。</p>
-                <p id="ios-app-store">“微车”是<span>App Store</span>认证的安全应用</p>
+                <p id="app-store">“行吧”是<span>腾讯手机助手、360安全手机卫士、豌豆荚</span>认证的安全应用。</p>
+                <p id="ios-app-store">“行吧”是<span>App Store</span>认证的安全应用</p>
             </div>
         </div>
         <div id="copyright" style="line-height:1.2;font-size:10px;">Copyright &copy; 2016-2018 杭州鹿径科技有限公司 浙ICP备16022150号<br/></div>
     </div>
     <script>
-    var $_GET = (function(){
-        var url = window.document.location.href.toString();
-        var u = url.split("?");
-        if(typeof(u[1]) =="string"){
-            var search = u[1].split("#");
-            u = search[0].split("&");
-            var get = {};
-            for(var i in u){
-                var j = u[i].split("=");
-                get[j[0]] = j[1];
-            }
-            return get;
-        } else {
-            return {};
-        }
-    })();
-    var $channel = $_GET['channel'] ? $_GET['channel'].toLowerCase() : '';
-
-    if($channel == ''){
-        var ios = document.getElementById('ios');
-        ios.style.cursor = 'pointer';
-        ios.onclick = function(){
-            window.location.href = 'http://u.shequan.com/rt';
-        }
-        var android = document.getElementById('android');
-        android.style.cursor = 'pointer';
-        android.onclick = function(){
-            window.location.href = 'http://u.shequan.com/rs';
-        }
-    }else if($channel == '3g'){
-            var code = document.getElementById('code'),
-            code_android_ios = document.getElementById('code-android-ios-only'),
-            android_download = document.getElementById('android-download'),
-            ios_download = document.getElementById('ios-download');
-
-            code.style.display = 'none';
-            code_android_ios.style.display = 'block';
-            android_download.style.display = 'block';
-            ios_download.style.display = 'block';
-
-            ios_download.onclick = function(){
-                window.location.href = 'http://lnk8.cn/9sAxl8';
-            }
-            android_download.onclick = function(){
-                window.location.href = 'http://dl.weiche.me/martin/ZGQX_cpa';
-            }
-        }else if($channel == 'tieyou'){
-            var code = document.getElementById('code'),
-            code_android_ios = document.getElementById('code-android-ios-only'),
-            android_download = document.getElementById('android-download'),
-            ios_download = document.getElementById('ios-download');
-
-            code.style.display = 'none';
-            code_android_ios.style.display = 'block';
-            android_download.style.display = 'block';
-            ios_download.style.display = 'block';
-
-            ios_download.onclick = function(){
-                window.location.href = 'http://lnk8.cn/Z9INBl';
-            }
-            android_download.onclick = function(){
-                window.location.href = 'http://dl.weiche.me/martin/TieYou_CPA';
-            }
-        } else if ($channel == 'iosxianxing') {
-            document.getElementById('downlist').style.display = 'none';
-            document.getElementById('ios-downlist').style.display = 'block';
-            document.getElementById('icon-position').style.display = 'none';
-
-            document.getElementById('download-img').style.display = 'none';
-            document.getElementById('ios-download-img').style.display = 'block';
-            document.getElementById('ios').style.top = '0%';
-            document.getElementById('ios').style.left = '25%';
-            document.getElementById('ios').style.height = '100%';
-            document.getElementById('android').style.display = 'none';
-            document.getElementById('intro').style.display = 'none';
-
-            document.getElementById('ios-app-store').style.display = 'block';
-            document.getElementById('app-store').style.display = 'none';
-
-        }else if ($channel == 'sem') {
-            document.getElementById('copyright').innerHTML = '北京极鼎互动网络科技有限公司</br>公司地址：北京市海淀区北四环西路9号2104-232';
-            document.getElementById('downlist').innerHTML = '<div class="swipe-wrap"><div><img id="banner" src="http://img.buding.cn/weiche/2015/08/31/6fc53197123dc9ae21ddab7e0227e258.jpg"/></div><div><img id="banner" src="http://img.buding.cn/weiche/2015/08/31/17b218b47d48fd1e44578690cf0bfa8a.jpg"/></div></div>';
-            document.getElementById('icon-position').innerHTML = '<span class="icon-point">&bull;</span><span>&bull;</span>';
-            var slider = new Swipe(document.getElementById('downlist'), {
-                    // startSlide: 0,
-                    auto: 3000,
-                    speed: 500,
-                    continuous: false,
-                    // disableScroll: true,
-                    // stopPropagation: true,
-                    callback: function(index, slider) {
-                        var i = bullets.length;
-                        while (i--) {bullets[i].className = '';}
-                        bullets[index].className = 'icon-point';
-                    },
-            }),
-            bullets = document.getElementById('icon-position').getElementsByTagName('span');
-            android_download = document.getElementById('android'),
-            ios_download = document.getElementById('ios');
-            ios_download.onclick = function(){
-                window.location.href = 'http://u.weiche.me/Uj';
-            }
-            android_download.onclick = function(){
-                window.location.href = 'http://u.weiche.me/Uj';
-            }
-
-        }
-        /*else if($channel == 'test'){
-            window.location.href = 'http://dl.weiche.me/channel/buding';
-        }*/
-
-        if ($channel != 'iosxianxing' &&  $channel != 'sem') {
-            // slider
-            var slider = new Swipe(document.getElementById('downlist'), {
-                    // startSlide: 0,
-                    auto: 3000,
-                    speed: 500,
-                    // continuous: false,
-                    // disableScroll: true,
-                    // stopPropagation: true,
-                    callback: function(index, slider) {
-                        var i = bullets.length;
-                        while (i--) {bullets[i].className = '';}
-                        bullets[index].className = 'icon-point';
-                    },
-                // transitionEnd: function(index, element) {}
-            }),
-            bullets = document.getElementById('icon-position').getElementsByTagName('span');
-        }
-        </script>
-        <script type="text/javascript">
-            var locAll = document.querySelectorAll(".loc");
-            var click = document.querySelectorAll(".top");
-            var len = locAll.length;
-            function addclass(){
-                var i = 0;
-                (function(){
-                    if(i>9){return;}
-                    locAll[i].className += " " + "play";
-                    locAll[i].style.display = "block";
-                    window.setTimeout(arguments.callee,150);
-                    i++;
-                })();
-            };
-            function clickURL(){
-                for (var j = 0; j < len; j++) {
-                    locAll[j].onclick = function(){
-                        var city = this.childNodes[1].innerHTML;
-                        location.href = "http://cha.weiche.me/limit.php?channel=index&city_name=" + city;
-                    }
-                }
-            };
-        </script>
+    var mySwiper = new Swiper('.swiper-container',{
+        loop: false,
+    	autoplay: 3000,
+      });  
+    </script>
     </body>
     </html>
