@@ -15,7 +15,6 @@
 <script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#b75070dc3c1f67ae7be058c69a4cda6f"></script><script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: '1f36d4b3947b35fb4b74d0af'});</script>
 <style>
 .swiper-slide {
-	line-height: 300px;
 	color: #fff;
 	font-size: 36px;
 	text-align: center;
@@ -26,26 +25,33 @@
     <div id="wrap">
         <div id="nav">
             <img id="logo" style="width:50px;height:50;margin-top:10px" src="img/logo12.png"/>
-            <a href="http://www.lujingkeji.com/"><img id="homepage" src="img/home.jpg"/></a>
+            <a href="http://www.lujingkeji.com/"><img id="homepage" src="img/recommend/official.jpg"/></a>
         </div>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img id="banner" src="img/recommend/1.jpg"/></div>
-                <div class="swiper-slide"><img id="banner" src="img/recommend/2.jpg"/></div>
+        <div class="swiper-container" >
+            <div class="swiper-wrapper" >
+                <div class="swiper-slide" ><img id="banner" src="img/recommend/1.png"/></div>
+                <div class="swiper-slide" ><img id="banner" src="img/recommend/2.png"/></div>
             </div>
+        </div>
+        
+        <div id="code">
+            <img id="download-img" src="img/m_download.jpg" alt="扫描二维码"/>
+            <img id="ios-download-img" src="http://img.buding.cn/weiche/2016/02/29/075b96445ae0b08b531363e0825b4603.jpg" alt="扫描二维码"/>
+            <div id="ios"></div>
+            <div id="android"></div>
         </div>
 
         <div id="intro">
-            <img src="http://img.buding.cn/weiche/2015/08/31/af52963a504a7a23f9e92a45aee8dd87.png" alt=""/>
-            <p>违法快处理</p>
-            <p>违章快速处理找家放心的！</p>
-            <p>交通违章罚款，快捷高效</p>
+            <img src="/img/recommend/title1.png" alt=""/>
+            <p>路况早知道</p>
+            <p>拥堵，事故随心分享</p>
+            <p>一方有难，八方支援</p>
 
-            <img src="http://img.buding.cn/weiche/2015/08/31/4c49e08bb42cb45cbb3cf082fcccb809.png" alt=""/>
-            <p>事故快处理</p>
-            <p>轻微交通事故，处理既费时又麻烦</p>
-            <p>来“掌上”快速处理吧 </p>
+            <img src="img/recommend/title2.png" alt=""/>
+            <p>查询违章，违章早知道</p>
+            <p>交没罚款，从此不用再出门</p>
+            <p>在线扣分，在线处理</p>
 
         </div>
         <div class="email">
@@ -59,11 +65,17 @@
         </div>
         <div id="copyright" style="line-height:1.2;font-size:10px;">Copyright &copy; 2016-2018 杭州鹿径科技有限公司 浙ICP备16022150号<br/></div>
     </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script>
     var mySwiper = new Swiper('.swiper-container',{
         loop: false,
     	autoplay: 3000,
       });  
+    
+    window.onload=function(){
+	   var height =  $("#banner").height();
+	   $(".swiper-container").css('height',parseInt(height));
+    }
     </script>
     </body>
     </html>
