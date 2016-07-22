@@ -1,9 +1,5 @@
-# client-console
-客户端后台管理系统
+官网
 
-``main function``
-1. 后台的admin登陆
-2. 
-
-
-
+1.使用技术
+后端：springmvc spring mybatis  
+前端：freemarker,bootstrap,jquery.js,swipe.js
