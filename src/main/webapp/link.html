@@ -9,12 +9,11 @@
 	<meta name="description" content="鹿径是一个提供出行服务的互联网公司" />
 	<meta name="keywords" content="鹿径,出行,服务,违章查询,路况查询" />
 	<meta name="author" content="鹿径科技" />
-	<meta name="application-name" content="www.parox.cn" />
+	<meta name="application-name" content="行吧" />
 	<link rel="shortcut icon" href="/img/logo12.png">
 	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/bootstrap.css" media="screen">
 	<link rel="stylesheet" href="http://www.parox.cn/css/css2.0/parox-base.css" media="screen">
 	<link rel="stylesheet" href="css/pre2-lujing-home.css" media="screen">
-	<script src="http://www.parox.cn/js/lib/jquery/jquery-1.10.2.min.js"></script>
 	<script src="http://www.parox.cn/js/lib/bootstrap/bootstrap.min.js"></script>
 	
 	 <!-- Bootstrap -->
@@ -67,9 +66,9 @@
 		<!-- body -->
 		<div class="parox-about" >
 			<!-- jumbotron -->
-			<div class="about-jumbotron" style="background-image:url(img/aboutUS.jpg)">
+			<div class="about-jumbotron" style="background-image:url(img/linkUS.jpg)">
 				<div class="container">
-					<div class="title fadeIn"  style="text-align: center;position: inherit;">鹿径-让你的出行更省心</div>
+					<div class="title fadeIn"  style="text-align: center;position: inherit;">行吧-让你的出行更省心</div>
 					<!-- <img class="img fadeIn" src="http://www.parox.cn/images/images1.7/parox-device.png" /> -->
 				</div>
 			</div>
@@ -117,16 +116,16 @@
 	        <div class="container" >
 	          <div class="row">
 	            <div class="col-md-4">
-	                <h3 class="ft-white">公司</h3>
+	                <h3 class="ft-grey">公司</h3>
 
 	                <br>
-	                <h5><a href="/news" class="ft-white">新闻与活动</a></h5>
-	                <h5><a href="/about.html" class="ft-white">关于鹿径</a></h5>
-	                <h5 ><a href="#" class="ft-white">联系我们</a></h5>
+	                <h5><a href="/news" class="ft-grey">新闻与活动</a></h5>
+	                <h5><a href="/about.html" class="ft-grey">关于鹿径</a></h5>
+	                <h5 ><a href="#" class="ft-grey">联系我们</a></h5>
 	            </div>
 	            <div class="col-md-4">
 	                
-	                <h3 class="ft-white">关注我们</h3>
+	                <h3 class="ft-grey">关注我们</h3>
 	                <br>
 
 	                <!--  <img src="img/weibo-135.png"  height="24" width="24"><a href="#" class="ft-white">&nbsp;&nbsp;&nbsp;&nbsp;微博</a>
@@ -143,12 +142,12 @@
        
 	            </div>
 	            <div class="col-md-4">
-	                <h3 class="ft-white">联系信息</h3>
+	                <h3 class="ft-grey">联系信息</h3>
 	                <br>
-	                <h5 class="ft-white">浙江省杭州市滨江区滨盛路1505号银丰大厦1001室</h5>
+	                <h5 class="ft-grey">浙江省杭州市滨江区滨盛路1505号银丰大厦1001室</h5>
 	                <h5 class="ft-grey">4000-320-999</h5>
                 	<h5 class="ft-grey">0571-88331263</h5>
-	                <h5 class="ft-white">support@lujingkeji.com</h5>
+	                <h5 class="ft-grey">support@lujingkeji.com</h5>
 	            </div>
 	          </div>
 	           
@@ -160,77 +159,11 @@
         </div>
 	</footer>
 
-    
- 
-	
     <script src="/js/jquery.nav.js"></script>
     <script src="/js/custom.js"></script>
-    <script>
-		$(document).ready(function(e) {
-			//the browser adapt
-			var userAgent = navigator.userAgent.toLowerCase();
-			var _system = window.navigator.userAgent;
-			jQuery.browser = {
-				version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],
-				safari: /webkit/.test(userAgent),
-				opera: /opera/.test(userAgent),
-				msie: /msie/.test(userAgent) && !/opera/.test(userAgent),
-				mozilla: /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent),
-				Url: '/browser.html'
-			};
-			var _tation = ($.browser.safari && $.browser.version <= 500) || ($.browser.msie && $.browser.version < 8.0) || ($.browser.mozilla && $.browser.version < 24.0 && $.browser.version != 11) || ($.browser.opera && $.browser.version < 11.5);
-			if (_tation) {
-				alert('您的浏览器版本过低，请升级版本');
-				window.location.href = $.browser.Url;
-				if (_system.indexOf('Windows NT 5') > -1) {//xp system
-					$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
-				}
-
-			}
-			if ($.browser.msie && $.browser.version < 10.0) {//ie 8底下的input框
-				$('label[for="emailMobile"]').css({
-					width: "100%",
-					height: "56px",
-					clip: "auto",
-					"text-align": "left",
-					"text-indent": "20px",
-					color: "#999",
-					"line-height": "56px"
-				});
-				$('#emailMobile').on('click', function () {
-					$('label[for="emailMobile"]').css({
-						width: "1",
-						height: "1px",
-						color: "#fff",
-						clip: "rect(0, 0, 0, 0)"
-					});
-				});
-				$('#emailMobile').on('blur', function () {
-					if ($(this).val() == 0) {
-						$('label[for="emailMobile"]').css({
-							width: "100%",
-							height: "56px",
-							clip: "auto",
-							"text-align": "left",
-							"text-indent": "20px",
-							color: "#999",
-							"line-height": "56px"
-						});
-					}
-				});
-			}
-
-
-		});
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="js/bootstrap.min.js"></script>
-
-	    <script src="js/jquery.nav.js"></script>
-	    <script src="js/custom.js"></script>
-
 
 	    <script type="text/javascript" >
 	      $("a[data-weixin='touch']").mouseover(function(){

@@ -33,7 +33,7 @@
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
-	<style>
+	<style>style="margin-top:10px
     	#bdshare_weixin_qrcode_dialog_bg,#bdshare_weixin_qrcode_dialog{
     		width:262px!important;
     		height:295px!important;
@@ -49,28 +49,28 @@
 <body  data-spy="scroll" data-target="#rock-navigation" >
 	<div>
 		<!-- navacation -->
-		<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px"role="navigation" >
-		    <div class="container" >
+<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px;width:100%" role="navigation" >
+    <div class="container" >
 
-		      <div class="navbar-header"  >
-		        <button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
-		          <span class="icon icon-bar"></span>
-		          <span class="icon icon-bar"></span>
-		          <span class="icon icon-bar"></span>
-		        </button>
-		        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;opacity:1">
-		      </div>
-		      <nav class="collapse navbar-collapse navbar-left" style="margin-left:40px" id="rock-navigation"  >
-		        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase" >
-		          <li style="margin-top:10px;"><a href="/index.html" class="f-grey-lg"  style="background-color:transparent">首页</a></li>
-		          <li class="active" style="margin-top:10px;"><a href="/news" class="f-grey-lg" style="background-color:transparent">新闻</a></li>
-		          <li style="margin-top:10px;"><a href="/recruit.html" class="f-grey-lg" style="background-color:transparent">招聘</a></li><!-- smoothScroll  -->
-		        </ul>
-		      </nav>
+      <div class="navbar-header"  >
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation" style="vertical-align:middle">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <img  src="/img/logo.png"  style="width:50px;height:50px;margin-top:10px;margin-right:40px;opacity:1" >
+      </div>
+      <nav class="collapse navbar-collapse navbar-left" id="rock-navigation"  >
+        <ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
+          <li  style="margin-top:10px"><a href="/index.html" class="f-grey-lg" style="background-color:transparent">首页</a></li>
+          <li class="active" style="margin-top:10px;;opacity:1;"><a href="/news" class="f-white-lg" style="background-color:transparent">新闻</a></li>
+          <li style="margin-top:10px"><a href="/recruit.html" class="f-grey-lg" style="background-color:transparent">招聘</a></li><!-- smoothScroll  -->
+        </ul>
+      </nav>
 
-		    </div>
-		  </div>
-		  <!-- navacation -->
+    </div>
+  </div>
+  <!-- navacation -->
 
 		<!-- body -->
 		<div class="parox-case-detail parox-case">
@@ -152,44 +152,6 @@
 	</footer>
 	</div>
 	
-    <script>
-		$(document).ready(function(e) {
-			//the browser adapt
-			var userAgent = navigator.userAgent.toLowerCase();
-			var _system   = window.navigator.userAgent;
-			jQuery.browser = {
-				version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
-				safari: /webkit/.test( userAgent ),
-				opera: /opera/.test( userAgent ),
-				msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
-				mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
-				Url:'/browser.html'
-			};
-			var _tation=($.browser.safari&& $.browser.version<=500)||($.browser.msie&& $.browser.version<8.0)||($.browser.mozilla && $.browser.version<24.0&& $.browser.version!=11)||($.browser.opera && $.browser.version<11.5);
-			if (_tation) {
-				alert('您的浏览器版本过低，请升级版本');
-				window.location.href = $.browser.Url;
-				if (_system.indexOf('Windows NT 5') > -1) {//xp system
-					$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
-				}
-			}
-			if($.browser.msie && $.browser.version<10.0){//ie 8底下的input框
-				$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
-				$('#emailMobile').on('click', function () {
-				$('label[for="emailMobile"]').css({width:"1",height:"1px",color:"#fff",clip:"rect(0, 0, 0, 0)"});
-				});
-				$('#emailMobile').on('blur', function () {
-					if($(this).val()==0){
-						$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
-					}
-				});
-			}
-		});
-	
-	</script>
-	<script>
-		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-	</script>
 	<!-- by zwx -->
      <script src="js/bootstrap.min.js"></script>
 

@@ -42,7 +42,6 @@
 </head>
 
 <body  data-spy="scroll" data-target="#rock-navigation">
-<#assign baseUrl="localhost:8080"/>
 		<!-- navacation -->
 		<div class="navbar  bs-dos-nav navbar-fixed-top sticky-navigation"  style="background-color:#000000;height:68px"role="navigation" >
 		    <div class="container" >
@@ -244,7 +243,6 @@
 
 
     <script type="text/javascript" >
-    /*by zwx*/	
       $("a[data-weixin='touch']").mouseover(function(){
       $("#weixin_QR").show();
       });
@@ -252,64 +250,7 @@
        $("a[data-weixin='touch']").mouseout(function(){
       $("#weixin_QR").hide();
       });
-	/*by zwx*/	
 
-
-		$(document).ready(function(e) {
-			//the browser adapt
-			var userAgent = navigator.userAgent.toLowerCase();
-			var _system   = window.navigator.userAgent;
-			jQuery.browser = {
-				version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
-				safari: /webkit/.test( userAgent ),
-				opera: /opera/.test( userAgent ),
-				msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
-				mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
-				Url:'/browser.html'
-			};
-			var _tation=($.browser.safari&& $.browser.version<=500)||($.browser.msie&& $.browser.version<8.0)||($.browser.mozilla && $.browser.version<24.0&& $.browser.version!=11)||($.browser.opera && $.browser.version<11.5);
-			if (_tation) {
-				alert('您的浏览器版本过低，请升级版本');
-				window.location.href = $.browser.Url;
-				if (_system.indexOf('Windows NT 5') > -1) {//xp system
-					$('.ie').attr('href', 'http://rj.baidu.com/soft/detail/23253.html?ald');
-				}
-	
-			}
-			if($.browser.msie && $.browser.version<10.0){//ie 8底下的input框
-				$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
-				$('#emailMobile').on('click', function () {
-					$('label[for="emailMobile"]').css({width:"1",height:"1px",color:"#fff",clip:"rect(0, 0, 0, 0)"});
-				});
-				$('#emailMobile').on('blur', function () {
-					if($(this).val()==0){
-						$('label[for="emailMobile"]').css({width:"100%",height:"56px",clip:"auto","text-align":"left","text-indent":"20px",color:"#999","line-height":"56px"});
-					}
-				});
-			}
-	
-			
-			//the system adapt
-			var system = {
-				win: false,
-				mac: false,
-				xll: false,
-				ipad:false,
-				mobile:false
-			};
-			var p = navigator.platform;
-			system.win = p.indexOf("Win") == 0;
-			system.mac = p.indexOf("Mac") == 0;
-			system.xll = (p == "X11") || (p.indexOf("Linux") == 0);
-			system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
-			system.mobile = (navigator.userAgent.toLowerCase().match(/mobile/)=='mobile')?true:false;
-			if (system.mobile) {
-				window.location.href = "www.lujingkeji.com/news";
-			}
-			
-		//$('#ls-tab a:last').tab('show')
-		});
-	
 	</script>
 </body>
 </html>

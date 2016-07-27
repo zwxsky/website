@@ -6,11 +6,12 @@
 #header{
 	background-image:  url(/img/background.jpg);
 	background-size:100% 100%;
+	img-responsive;
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	height: 1000px;
+	height:1000px;
 	background-position:center;
 	background-repeat: no-repeat;
 }
@@ -84,13 +85,13 @@
 .f-white-lg{
 	  font-size: 36px;
 	  color: #FFFFFF;
-	   text-align: center;
+	   text-align: right;
 }
 
 .f-grey-lg{
 	  font-size: 24px;
 	  color: #ADADAD;
-	   text-align: center;
+	   text-align: right;
 
 }
 

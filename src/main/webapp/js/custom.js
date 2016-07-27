@@ -75,12 +75,12 @@ jQuery(document).ready(function($){
     function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         if (top > 40) $('.sticky-navigation').stop().animate({
-            "opacity": '0.3',
+            "opacity": '1',
             "top": '0'
         });
         else $('.sticky-navigation').stop().animate({
-            "opacity": '0.3',
-            "top": '-75
+            "opacity": '1',
+            "top": '-75'
             	
         });
       
