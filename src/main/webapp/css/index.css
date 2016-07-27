@@ -1,0 +1,497 @@
+    body,
+    div,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    legend,
+    button form,
+    fieldset,
+    input,
+    textarea,
+    p,
+    blockquote,
+    table,
+    th,
+    td,
+    img {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    
+    body {
+        background: #fff;
+        color: #4b5e67;
+        font-family: "Microsoft YaHei", "Microsoft JhengHei", STHeiti, MingLiu;
+        -webkit-font-size-adjust: none;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    /*下载页面*/
+    
+    #wrap {
+        width: 100%;
+    }
+    
+    #nav {
+        height: 64px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    #logo {
+        width: 155px;
+        margin-left: 18px;
+        margin-top: 15px;
+    }
+    
+    #homepage {
+        width: 78px;
+        float: right;
+        margin-right: 16px;
+        margin-top: 13px;
+    }
+    
+    #downlist {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    #ios {
+        width: 52%;
+        height: 33%;
+        /*border:1px solid #CCC;*/
+        position: absolute;
+        top: 0;
+        right: 11%;
+    }
+    
+    #android {
+        width: 52%;
+        height: 33%;
+        /*border:1px solid #CCC;*/
+        position: absolute;
+        bottom: 16%;
+        right: 11%;
+    }
+    
+    #banner {
+        width: 100%;
+    }
+    
+    #code {
+        width: 87%;
+        text-align: center;
+        position: relative;
+        margin: 22px auto 22px;
+    }
+    
+    #code img {
+        width: 100%;
+    }
+    
+    #intro {
+        margin-top: 29px;
+        margin-bottom: 50px;
+    }
+    
+    #intro img {
+        display: block;
+        margin: 0 auto;
+        width: 87%;
+    }
+    
+    #intro p {
+        margin-left: 17%;
+        color: #4b5e67;
+        font-size: 12px;
+    }
+    
+    #note {
+        border-top: 1px solid #B2B2B2;
+        border-bottom: 1px solid #DCDCDC;
+        line-height: 25px;
+        text-align: center;
+        font-size: 9px;
+    }
+    
+    #note span {
+        color: #55c126;
+    }
+    
+    #copyright {
+        color: #ababab;
+        font-size: 6px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* Swipe 2 required styles */
+    
+    #downlist {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+    }
+    
+    .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+        line-height: 0;
+    }
+    
+    #downlist img {}
+    /* END required styles */
+    
+    #icon-position {
+        font-size: 24px;
+        color: #DFDFDF;
+        position: relative;
+        top: -20px;
+        right: 40px;
+        float: right;
+    }
+    
+    #icon-position .icon-point {
+        color: #00CE45;
+    }
+    
+    #code-android-only,
+    #android-download {
+        display: none;
+        background: url(../img/m_download.jpg) -160px -70px no-repeat;
+        background-size: 400px;
+        height: 60px;
+        margin: 20px auto 0;
+        width: 240px;
+        cursor: pointer;
+    }
+    
+    #android-download {
+        margin-top: 5px;
+    }
+    
+    #ios-download {
+        display: none;
+        background: url(../img/m_download.jpg) -160px 0px no-repeat;
+        background-size: 400px;
+        height: 60px;
+        margin: 25px auto 0;
+        width: 240px;
+        cursor: pointer;
+    }
+    
+    #code-android-ios-only {
+        display: none;
+    }
+    
+    .banner-top img {
+        width: 100%;
+    }
+    
+    .downlist {
+        text-align: center;
+    }
+    
+    #ios-downlist,
+    #ios-download-img,
+    #ios-app-store {
+        display: none;
+    }
+    
+    #ios-download-img {
+        width: 50% !important;
+        margin: 0 auto;
+    }
+    
+    .iosxingxing {
+        position: relative;
+    }
+    
+    .loc {
+        display: none;
+        width: 50px;
+        position: absolute;
+        top: 149px;
+        left: 105px;
+    }
+    
+    .loc .top {
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        top: 2px;
+        left: 0px;
+        z-index: 1;
+        background: #5fccf5;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        ;
+    }
+    
+    .loc .bottom {
+        content: '';
+        height: 0px;
+        width: 0px;
+        display: block;
+        position: absolute;
+        border: 10px transparent solid;
+        border-top-color: #5fccf5;
+    }
+    
+    .play {
+        -webkit-animation-name: slideInDown;
+        animation-name: slideInDown;
+        animation-duration: 1s;
+    }
+    
+    .tianjin {
+        background: #72ba4a;
+        top: 30%;
+        left: 7%;
+    }
+    
+    .tianjin .top {
+        background: #72ba4a;
+    }
+    
+    .tianjin .bottom {
+        border-top-color: #72ba4a;
+    }
+    
+    .haerbin {
+        background: #fed933;
+        top: 47%;
+        ;
+        left: 11%;
+        ;
+    }
+    
+    .haerbin .top {
+        background: #fed933;
+        font-size: 12px !important;
+    }
+    
+    .haerbin .bottom {
+        border-top-color: #fed933;
+    }
+    
+    .lanzhou {
+        background: #fed933;
+        top: 25%;
+        left: 20%;
+        ;
+    }
+    
+    .lanzhou .top {
+        background: #fed933;
+        font-size: 16px;
+    }
+    
+    .lanzhou .bottom {
+        border-top-color: #fed933;
+    }
+    
+    .beijing {
+        background: #67cdf5;
+        top: 37%;
+        ;
+        left: 31%;
+    }
+    
+    .beijing .top {
+        background: #67cdf5;
+    }
+    
+    .beijing .bottom {
+        border-top-color: #67cdf5;
+    }
+    
+    .guiyang {
+        background: #67cdf5;
+        top: 27%;
+        left: 47%;
+        ;
+    }
+    
+    .guiyang .top {
+        background: #67cdf5;
+    }
+    
+    .guiyang .bottom {
+        border-top-color: #67cdf5;
+    }
+    
+    .chengdu {
+        left: 71%;
+        top: 66%;
+    }
+    
+    .chengdu .top {
+        background: #69bd4b;
+    }
+    
+    .chengdu .bottom {
+        border-top-color: #69bd4b;
+    }
+    
+    .changchun {
+        top: 55%;
+        left: 82%;
+    }
+    
+    .changchun .top {
+        background: #67cdf5;
+    }
+    
+    .changchun .bottom {
+        border-top-color: #67cdf5;
+    }
+    
+    .nanchang {
+        top: 71%;
+        left: 87%;
+        ;
+    }
+    
+    .nanchang .top {
+        background: #67cdf5;
+    }
+    
+    .nanchang .bottom {
+        border-top-color: #67cdf5;
+    }
+    
+    .hangzhou {
+        top: 30%;
+        left: 77%;
+    }
+    
+    .hangzhou .top {
+        background: #fedb07;
+    }
+    
+    .hangzhou .bottom {
+        border-top-color: #fedb07;
+    }
+    
+    .wuhan {
+        top: 38%;
+        left: 89%;
+    }
+    
+    .wuhan .top {
+        background: #69bd4b;
+    }
+    
+    .wuhan .bottom {
+        border-top-color: #69bd4b;
+    }
+    
+    @-webkit-keyframes slideInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-100px);
+            -ms-transform: translateY(-100px);
+            transform: translateY(-100px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    /*大号*/
+    
+    .size1 .top {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    
+    .size1 .bottom {
+        border-width: 22px 16px 0px 16px;
+        bottom: -56px;
+        left: 4px;
+    }
+    /*中号*/
+    
+    .size2 .top {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    
+    .size2 .bottom {
+        border-width: 22px 14px 0px 14px;
+        bottom: -45px;
+        left: 1px;
+    }
+    /*小号*/
+    
+    .size3 .top {
+        height: 26px;
+        width: 26px;
+        line-height: 26px;
+    }
+    
+    .size3 .bottom {
+        border-width: 15px 10px 0px 10px;
+        bottom: -38px;
+        left: 3px;
+    }
+    .brief{
+        width: 100%;
+        position: absolute;
+        bottom: 2%;
+        font-size: 14px;
+        color: rgba(0,0,0,0.7);
+        text-align: center;
+    }
+    .email{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .email p{
+        color: #4b5e67;
+        font-size: 9px;
+    }
