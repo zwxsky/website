@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
 <link href="/css/lujing-home.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
-<!--  <link href="/css/parox-base.css" rel="stylesheet"> -->
 <!-- byzwx-->
 <!--[if lt IE 9]>
     	<script src="/js/compatibility/ie8-responsive-file-warning.js"></script>
@@ -32,12 +31,12 @@
 	//百度统计
 	var _hmt = _hmt || [];
 	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?7adf4f36aac22b99b592f1d2fa497c81";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?7adf4f36aac22b99b592f1d2fa497c81";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
 	})();
-	</script>
+</script>
 </head>
 
 <body data-spy="scroll" data-target="#rock-navigation">
@@ -184,15 +183,16 @@
 
 						<h3 class="ft-grey" style="margin-bottom: 20px; margin-top: 30px;">关注我们</h3>
 						<br>
-						<img src="/img/weixin-135.png" height="24" width="24">
-						&nbsp;&nbsp;&nbsp; <a href="javascript:void(0)" class="ft-grey"
-							data-weixin="touch"> 微信
-							<div id="weixin_QR" class="wechat" hidden>
-								<!-- <img src="http://www.parox.cn/images/images1.6/home/weixin-getqrcode.jpg"> -->
-								<img src="/img/xingba.jpg" style="width: 40%; height: 40%">
-							</div>
-						</a>
-
+						<h5>
+							<img src="/img/weixin-135.png" height="24" width="24">
+							&nbsp;&nbsp;&nbsp; <a href="javascript:void(0)" class="ft-grey"
+								data-weixin="touch"> 微信
+								<div id="weixin_QR" class="wechat" hidden>
+									<!-- <img src="http://www.parox.cn/images/images1.6/home/weixin-getqrcode.jpg"> -->
+									<img src="/img/xingba.jpg" style="width: 40%; height: 40%">
+								</div>
+							</a>
+						</h5>
 					</div>
 					<div class="col-md-4">
 						<h3 class="ft-grey" style="margin-bottom: 20px; margin-top: 30px;">联系信息</h3>
@@ -207,8 +207,8 @@
 		</div>
 		<!-- copyright -->
 		<div class="copyright">
-			<p>Copyright © 2016-2018 杭州鹿径科技有限公司 浙ICP备16022150号</p>
-		</div>
+ 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010802004080" style="display:inline-block;text-decoration:none;"><p>Copyright © 2016-2018 杭州鹿径科技有限公司 浙公网安备 33010802004080号</p></a>
+	 	</div>
 	</footer>
 	</div>
 
@@ -220,14 +220,13 @@
 
 
 	<script type="text/javascript">
-      $("a[data-weixin='touch']").mouseover(function(){
-      $("#weixin_QR").show();
-      });
+		$("a[data-weixin='touch']").mouseover(function() {
+			$("#weixin_QR").show();
+		});
 
-       $("a[data-weixin='touch']").mouseout(function(){
-      $("#weixin_QR").hide();
-      });
-
+		$("a[data-weixin='touch']").mouseout(function() {
+			$("#weixin_QR").hide();
+		});
 	</script>
 </body>
 </html>
